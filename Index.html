@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OnlyBooks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="icon" href="OnlyBooks_tab.png">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script type="text/javascript">
+    function zoom() {
+       
+// let i = 0;
+// while (i < 1000000) {
+//   task(i);
+//    i++;
+// }
+// function task(i) {
+//   setTimeout(function() {
+//       // Add tasks to do
+//   }, 2000 * i);
+// }
+        document.body.style.zoom = "90%" 
+    }
+</script>
+
+<body onload="zoom()">
+   <header class="header">
+       <div class="header-1">
+           <a href="#" class="logo"><img class = "logo-img" src="OnlyBooks.png"></a>
+           <form action="" class="search-form">
+               <input type="search" name="search-bpx" placeholder="Type the name here..">
+               <!-- <label for="search-box" class="fas fa-search"></label> -->
+               <div id="search-btn" class="fa fa-search"></div>
+           </form>
+           <div class="icons">
+               
+               <a href = "#" class="fa fa-gear"></a>
+               <a href="#" class="fa fa-shopping-cart"></a>
+               <div id="login-btn" class="fas fa-user"></div>
+           </div>
+       </div>
+       <div class="navbar">
+           <img class="menu"src="menu.png" alt="" onclick="menutoggle()">
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#feature">Feature</a></li>
+                <li><a href="#Fresh">Fresh</a></li>
+                <li><a href="#Explore">Feature</a></li>
+                <li class="last"><a href="#Contact-us">Contact us</a></li>
+            </ul>
+        </nav>
+        <img class="mainlogo" src="OnlyBooks1.png" height="30px" width="100px" alt="">
+        <img class="cart" src="cart.png" width="30px" height="30px" alt="">
+       </div>
+        
+           
+       
+   </header>
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <h2>I like big books and I cannot lie!!</h2>
+            <p>Get amazing deals on all kinds of books that will make you drool<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus illo, fugiat possimus dolorem libero voluptas?Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <span href="#" class="button">Shop Now</span>
+        </div>
+        <div class="book-cover">
+            
+        </div>
+    </div>
+</section>
+<section class="icons-container">
+    <div class="icons card">
+        <i class="fas fa-paper-plane"></i>
+        <div class="content">
+            <h3>Fastest Shipping</h3>
+            <p>Also get free delivery over Rs.999/-</p>
+        </div>
+    </div>
+    <div class="icons card">
+        <i class="fas fa-smile"></i>
+        <div class="content">
+            <h3>Special Offers</h3>
+            <p>Get attractive festive offers on all products</p>
+        </div>
+    </div>
+    <div class="icons card">
+        <i class="fas fa-book"></i>
+        <div class="content">
+            <h3>Early Bird</h3>
+            <p>Get designer book marks free with every purchase</p>
+        </div>
+    </div>
+    <div class="icons card">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+            <h3>24/7</h3>
+            <p>Reach out to us anytime</p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">New Books</a></li>
+                    <li><a href="#">Bookmarks</a></li>
+                    <li><a href="#">Used books</a></li>
+                    <li><a href="#">Posters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col icon-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <div class="col">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="mob">
+            <h4>follow us</h4>
+            <div class="social-links">
+                
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>                
+            </div>
+            
+        </div>
+    </div>
+</footer>
+<script>
+    // nav bar
+    
+  
+    var MenuItems =document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight="0px";
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="130vh";
+            menu.classList.add('active');
+            
+        }
+        else
+        {
+            MenuItems.style.maxHeight="0px";
+            menu.classList.remove('active');
+            
+        }
+    }
+   
+   
+
+</script>
+</body>
+</html>
