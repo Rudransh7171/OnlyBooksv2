@@ -40,7 +40,9 @@ html::-webkit-scrollbar-thumb{
     background:var(--black);
 }
 */
-
+a{
+	color:#fff;
+}
 section{
     padding:5rem 9%;
 }
