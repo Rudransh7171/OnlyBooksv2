@@ -26,7 +26,7 @@
     }
 </script> -->
 
-<body onload="zoom()">
+<body class="main"></body>
    <header class="header">
        <div class="header-1">
            <a href="#" class="logo"><img class = "logo-img" src="OnlyBooks.png"></a>
@@ -43,18 +43,31 @@
            </div>
        </div>
        <div class="navbar">
-           <img class="menu"src="menu.png" alt="" onclick="menutoggle()">
-        <nav>
-            <ul id="MenuItems">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#feature">Feature</a></li>
-                <li><a href="#Fresh">Fresh</a></li>
-                <li><a href="#Explore">Feature</a></li>
-                <li class="last"><a href="#Contact-us">Contact us</a></li>
-            </ul>
-        </nav>
-        <img class="mainlogo" src="OnlyBooks1.png" height="30px" width="100px" alt="">
-        <img class="cart" src="cart.png" width="30px" height="30px" alt="">
+            <div class="menu-btn" onclick="menutoggle()">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <nav class="menus">
+                <ul id="MenuItems">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#feature">Feature</a></li>
+                    <li><a href="#Fresh">Fresh</a></li>
+                    <li><a href="#Explore">Feature</a></li>
+                    <li class="last"><a href="#Contact-us">Contact us</a></li>
+                </ul>
+            </nav>
+            <img class="mainlogo" src="OnlyBooks1.png" height="30px" width="100px" alt="">
+            <div class="forcart"><img class="cart" src="cart.png" width="40px" onclick="acctoggle()" height="30px" alt=""></div>
+            <div class="acc">
+                <ul id="AccountItems">
+                    <li><a href="#bag">Bag</a></li>
+                    <li><a href="#saveditems">Saved Items</a></li>
+                    <li><a href="#orders">Orders</a></li>
+                    <li><a href="#account">Account</a></li>
+                    <li class="last"><a href="#signin">Sign in</a></li>
+                    
+                </ul>
+                
+            </div>
        </div>
         
            
@@ -168,24 +181,64 @@
     
   
     var MenuItems =document.getElementById("MenuItems");
-    
+    var AccountItems =document.getElementById("AccountItems");
+    const cart=document.querySelector('.cart');
+    const acc= document.querySelector('.acc');
+    const nav=document.querySelector('.navbar');
+    const main=document.querySelector('.main');
     MenuItems.style.maxHeight="0px";
     function menutoggle()
     {
         if(MenuItems.style.maxHeight=="0px"){
             MenuItems.style.maxHeight="130vh";
-            menu.classList.add('active');
+            // menu.classList.add('active');
+            cart.classList.add('active');
+            acc.classList.add('active');
+            nav.classList.add('active');
             
         }
         else
         {
             MenuItems.style.maxHeight="0px";
-            menu.classList.remove('active');
+            // menu.classList.remove('active');
+            cart.classList.remove('active');
+            acc.classList.remove('active');
+            nav.classList.remove('active');
+            AccountItems.style.maxHeight="0px";
             
         }
     }
-   
-   
+    // const acc= document.querySelector('.acc');
+    AccountItems.style.maxHeight="0px";
+    function acctoggle()
+    {
+        if(AccountItems.style.maxHeight=="0px"){
+            AccountItems.style.maxHeight="68vh";
+            // menu.classList.add('active');
+            main.classList.add('active');
+            
+            
+        }
+        else
+        {
+            AccountItems.style.maxHeight="0px";
+            // menu.classList.remove('active');
+            main.classList.remove('active');
+            
+            
+        }
+    }
+    const menuBtn = document.querySelector('.menu-btn');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+    });
 
 </script>
 </body>
